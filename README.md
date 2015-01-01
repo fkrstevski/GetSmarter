@@ -21,3 +21,14 @@ To Add iOS target
 - Set the Tasks to launchIPhoneSimulator or launchIPadSimulator or launchIOSDevice
 - Click Apply and then OK.
 
+To Change iOS simulator
+- Open terminal
+- Navigate to where the IOSLauncher.app is
+	- xcrun instruments -s
+		- lists all device types
+	- xcrun instruments -w "iPhone 5 (8.0 Simulator)"
+		- launch simulator
+	- xcrun simctl install booted IOSLauncher.app 
+		- install the app on the simulator
+	- xcrun simctl launch booted <app identifier or bundle id>
+		- launch the app
